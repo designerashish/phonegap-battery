@@ -1,0 +1,25 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        },
+        "cordova-plugin-flashlight": {
+            "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        }
+    }
+}
