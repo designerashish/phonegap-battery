@@ -39,7 +39,7 @@ var app = {
 
         document.getElementById("battery_status").addEventListener("click", function(){
                         window.addEventListener("batterystatus", onBatteryStatus, false);            
-        });
+        }, false);
 
 
 
