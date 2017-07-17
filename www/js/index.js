@@ -36,7 +36,12 @@ var app = {
     receivedEvent: function(id) {
 
 /*batttery status*/
-        document.getElementById("battery_status").addEventListener("click", onBatteryStatus, false );
+
+        document.getElementById("battery_status").addEventListener("click", function(){
+                        window.addEventListener("batterystatus", onBatteryStatus, false);            
+        });
+
+
 
         function onBatteryStatus(info) { 
                 alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged); 
@@ -46,7 +51,7 @@ var app = {
 
 /*flashlight on*/
 
-window.plugins.flashlight.switchOn
+
         document.getElementById("torch").addEventListener("click", torchtoggle, false );
 
         function torchtoggle() { 
