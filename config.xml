@@ -44,16 +44,16 @@ An App. for all phonegap working samples.
     
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" width="512" height="512" />
-    <icon src="res/screen/android/512.png"   gap:platform="android"    gap:density="ldpi" />
-    <icon src="res/screen/android/512.png"   gap:platform="android"    gap:density="mdpi" />
-    <icon src="res/screen/android/512.png"   gap:platform="android"    gap:density="hdpi" />
-    <icon src="res/screen/android/512.png"  gap:platform="android"    gap:density="xhdpi" />
+    <icon src="res/screen/android/512.png"   platform="android"    density="ldpi" />
+    <icon src="res/screen/android/512.png"   platform="android"    density="mdpi" />
+    <icon src="res/screen/android/512.png"   platform="android"    density="hdpi" />
+    <icon src="res/screen/android/512.png"  platform="android"   density="xhdpi" />
     
     <!-- Define app splash screen for each platform.     -->
-    <splash src="res/screen/android/ldpi/splash.png"  gap:platform="android" gap:density="ldpi" />
-    <splash src="res/screen/android/mdpi/splash.png"  gap:platform="android" gap:density="mdpi" />
-    <splash src="res/screen/android/hdpi/splash.png"  gap:platform="android" gap:density="hdpi" />
-    <splash src="res/screen/android/xhdpi/splash.png" gap:platform="android" gap:density="xhdpi" />
+    <splash src="res/screen/android/ldpi/splash.png"  platform="android" density="ldpi" />
+    <splash src="res/screen/android/mdpi/splash.png"  platform="android" density="mdpi" />
+    <splash src="res/screen/android/hdpi/splash.png"  platform="android" density="hdpi" />
+    <splash src="res/screen/android/xhdpi/splash.png" platform="android" density="xhdpi" />
    
   
 
