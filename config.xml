@@ -18,10 +18,12 @@ Barcode Scanner to scan all type of barcode and QR code.
     <platform name="android">
         <allow-intent href="market:*" />
         <icon height="512" src="icon.png" width="512" />
-        <splash density="port-ldpi" src="res/screen/android/ldpi/splash.png" />
-        <splash density="port-mdpi" src="res/screen/android/mdpi/splash.png" />
-        <splash density="port-hdpi" src="res/screen/android/hdpi/splash.png" />
-        <splash density="port-xhdpi" src="res/screen/android/xhdpi/splash.png" />
+        <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi"/>
+        <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -37,7 +39,7 @@ Barcode Scanner to scan all type of barcode and QR code.
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="true" />
     <preference name="show-splash-screen-spinner" value="false" />
-    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="11" />
     <preference name="android-installLocation" value="auto" />

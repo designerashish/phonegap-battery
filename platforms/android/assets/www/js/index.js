@@ -35,10 +35,6 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
-      navigator.splashscreen.hide();
-
-
-
 document.getElementById('barcode').addEventListener('click',mscan);
 function mscan(){
  cordova.plugins.barcodeScanner.scan(
