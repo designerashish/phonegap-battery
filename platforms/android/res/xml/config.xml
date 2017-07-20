@@ -30,4 +30,16 @@ An App. for all phonegap working samples.
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+
+
+
+
+
+
+
+
+
+
+
+
 </widget>

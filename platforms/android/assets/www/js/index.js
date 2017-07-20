@@ -52,15 +52,14 @@ var app = {
 /*flashlight on*/
 
 
-        document.getElementById("torch").addEventListener("click", torchtoggle, false );
+        document.getElementById("torch").addEventListener("click", torchtoggle );
 
         function torchtoggle() { 
             window.plugins.flashlight.toggle();
         }
 
 
-document.getElementById('barcode').addEventListener('click',mscan,false);
-
+document.getElementById('barcode').addEventListener('click',mscan);
 function mscan(){
  cordova.plugins.barcodeScanner.scan(
       function (result) {
