@@ -17,6 +17,18 @@ An App. for all phonegap working samples.
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+         <!-- Define app icon for each platform. -->
+    <icon src="icon.png" width="512" height="512" />
+    <icon src="res/screen/android/512.png"       density="ldpi" />
+    <icon src="res/screen/android/512.png"       density="mdpi" />
+    <icon src="res/screen/android/512.png"       density="hdpi" />
+    <icon src="res/screen/android/512.png"     density="xhdpi" />
+    
+    <!-- Define app splash screen for each platform.     -->
+    <splash src="res/screen/android/ldpi/splash.png"   density="port-ldpi" />
+    <splash src="res/screen/android/mdpi/splash.png"   density="port-mdpi" />
+    <splash src="res/screen/android/hdpi/splash.png"   density="port-hdpi" />
+    <splash src="res/screen/android/xhdpi/splash.png"  density="port-xhdpi" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -42,18 +54,7 @@ An App. for all phonegap working samples.
     <preference name="permissions" value="none"/>
 
     
-    <!-- Define app icon for each platform. -->
-    <icon src="icon.png" width="512" height="512" />
-    <icon src="res/screen/android/512.png"   platform="android"    density="ldpi" />
-    <icon src="res/screen/android/512.png"   platform="android"    density="mdpi" />
-    <icon src="res/screen/android/512.png"   platform="android"    density="hdpi" />
-    <icon src="res/screen/android/512.png"  platform="android"   density="xhdpi" />
-    
-    <!-- Define app splash screen for each platform.     -->
-    <splash src="res/screen/android/ldpi/splash.png"  platform="android" density="ldpi" />
-    <splash src="res/screen/android/mdpi/splash.png"  platform="android" density="mdpi" />
-    <splash src="res/screen/android/hdpi/splash.png"  platform="android" density="hdpi" />
-    <splash src="res/screen/android/xhdpi/splash.png" platform="android" density="xhdpi" />
+   
    
   
 
