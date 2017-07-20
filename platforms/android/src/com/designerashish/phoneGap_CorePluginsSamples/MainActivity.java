@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.designerashish.barcode_scanner;
+package com.designerashish.phoneGap_CorePluginsSamples;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

@@ -29,19 +29,34 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
-window.addEventListener("batterystatus", onBatteryStatus, false); 
-
-function onBatteryStatus(info) { 
-   alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged); 
-}
-
-alert();
-
     },
 
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+
+/*batttery status*/
+
+        document.getElementById("battery_status").addEventListener("click", function(){
+                        window.addEventListener("batterystatus", onBatteryStatus, false);            
+        }, false);
+
+
+
+        function onBatteryStatus(info) { 
+                alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        }
+/*batttery status*/
+
+
+/*flashlight on*/
+
+
+        document.getElementById("torch").addEventListener("click", torchtoggle, false );
+
+        function torchtoggle() { 
+            window.plugins.flashlight.toggle();
+        }
 
 
  }

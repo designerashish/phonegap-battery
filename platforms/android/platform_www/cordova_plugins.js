@@ -15,6 +15,14 @@ module.exports = [
         "clobbers": [
             "navigator.battery"
         ]
+    },
+    {
+        "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+        "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+        "pluginId": "phonegap-plugin-barcodescanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -23,7 +31,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.2",
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-flashlight": "3.2.0",
-    "cordova-plugin-battery-status": "1.2.4"
+    "cordova-plugin-battery-status": "1.2.4",
+    "phonegap-plugin-barcodescanner": "6.0.8"
 };
 // BOTTOM OF METADATA
 });

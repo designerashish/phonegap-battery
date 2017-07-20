@@ -15,6 +15,9 @@
         },
         "cordova-plugin-battery-status": {
             "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.designerashish.barcode_scanner"
         }
     },
     "dependent_plugins": {
