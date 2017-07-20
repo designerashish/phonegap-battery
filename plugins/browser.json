@@ -18,6 +18,9 @@
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.designerashish.phoneGap_CorePluginsSamples"
         }
     },
     "dependent_plugins": {}

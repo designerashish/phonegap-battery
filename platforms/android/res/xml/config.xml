@@ -13,9 +13,13 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
-    <name>PhoneGap CorePlugin Samples</name>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>BarCode Scanner</name>
     <description>
-An App. for all phonegap working samples.
+Barcode Scanner to scan all type of barcode and QR code.
     </description>
     <author email="designerashish90@gmail.ccom" href="http://designerashish.org">
         Designerashish
@@ -29,17 +33,25 @@ An App. for all phonegap working samples.
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon height="512" src="icon.png" width="512" />
+    <splash density="port-ldpi" src="res/screen/android/ldpi/splash.png" />
+    <splash density="port-mdpi" src="res/screen/android/mdpi/splash.png" />
+    <splash density="port-hdpi" src="res/screen/android/hdpi/splash.png" />
+    <splash density="port-xhdpi" src="res/screen/android/xhdpi/splash.png" />
     <preference name="loglevel" value="DEBUG" />
-
-
-
-
-
-
-
-
-
-
-
-
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="false" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="true" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="11" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="permissions" value="none" />
 </widget>

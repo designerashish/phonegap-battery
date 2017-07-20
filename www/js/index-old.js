@@ -80,3 +80,13 @@ var app = {
 
 
 app.initialize();
+
+Top Blue Header Color : #097bbe with shadow.
+
+
+
+        document.getElementById("torch").addEventListener("click", torchtoggle );
+
+        function torchtoggle() { 
+            window.plugins.flashlight.toggle();
+        }

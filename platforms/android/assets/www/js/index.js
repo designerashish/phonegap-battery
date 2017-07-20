@@ -35,28 +35,8 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
-/*batttery status*/
+      navigator.splashscreen.hide();
 
-        document.getElementById("battery_status").addEventListener("click", function(){
-                        window.addEventListener("batterystatus", onBatteryStatus, false);            
-        }, false);
-
-
-
-        function onBatteryStatus(info) { 
-                alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged); 
-        }
-/*batttery status*/
-
-
-/*flashlight on*/
-
-
-        document.getElementById("torch").addEventListener("click", torchtoggle );
-
-        function torchtoggle() { 
-            window.plugins.flashlight.toggle();
-        }
 
 
 document.getElementById('barcode').addEventListener('click',mscan);

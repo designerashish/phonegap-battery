@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -72,6 +76,9 @@
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.designerashish.barcode_scanner"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.designerashish.phoneGap_CorePluginsSamples"
         }
     },
     "dependent_plugins": {},
@@ -99,6 +106,14 @@
             "clobbers": [
                 "cordova.plugins.barcodeScanner"
             ]
+        },
+        {
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -106,6 +121,7 @@
         "cordova-plugin-compat": "1.0.0",
         "cordova-plugin-flashlight": "3.2.0",
         "cordova-plugin-battery-status": "1.2.4",
-        "phonegap-plugin-barcodescanner": "6.0.8"
+        "phonegap-plugin-barcodescanner": "6.0.8",
+        "cordova-plugin-splashscreen": "4.0.3"
     }
 }
