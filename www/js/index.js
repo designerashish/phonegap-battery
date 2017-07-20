@@ -64,6 +64,7 @@ document.getElementById('barcode').addEventListener('click',mscan,false);
 function mscan(){
  cordova.plugins.barcodeScanner.scan(
       function (result) {
+        document.getElementById('scan_result').innerHTML = result.text;
           alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
