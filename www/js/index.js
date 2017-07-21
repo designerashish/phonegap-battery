@@ -39,11 +39,11 @@ document.getElementById('barcode').addEventListener('click',mscan);
 function mscan(){
  cordova.plugins.barcodeScanner.scan(
       function (result) {
-        document.getElementById('scan_result').innerHTML = result.text;
-          alert("We got a barcode\n" +
+        document.getElementById('h2').innerHTML = result.text;
+          /*alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
-                "Cancelled: " + result.cancelled);
+                "Cancelled: " + result.cancelled);*/
       },
       function (error) {
           alert("Scanning failed: " + error);
