@@ -24,18 +24,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
+    background-color:#ffffff;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
@@ -107,34 +96,5 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-form{
-    font-size: 1.5em;
-}
-
-
-form span,form span label{
-    display:block !important;
-    margin-bottom:5px;
-}
-form span {
-    margin-bottom:15px;
-    text-align: left;
-}
-
-form span input{
-    width:100%;
-    padding:10px;
-}
-form input[type="submit"], button{
-    background:green;
-    border:none;
-    width:calc(100VW - 50px);
-    color:#fff;
-    border-radius:3px;
-    padding:10px;
-    display:block;
-    font-size: 16px;
-    font-weight:bold;
-}
-
+/*login*/
 
