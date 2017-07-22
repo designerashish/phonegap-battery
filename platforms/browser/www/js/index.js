@@ -105,6 +105,7 @@ document.getElementById('back').addEventListener('click',onBackKeyDown, false)
 }
 
 
+
 };
 function sendData() {
     var form = document.getElementById("create_asset_form");
