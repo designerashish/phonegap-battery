@@ -118,7 +118,7 @@ function sendData() {
     XHR.addEventListener("error", function(event) {
       alert('Oops! Something goes wrong.');
     });
-    XHR.open("POST", "http://designerashish.org/assets/post.php");
+    XHR.open("POST", "http://www.designerashish.org/assets/post.php");
     XHR.send(FD);
   }
 app.initialize();

@@ -26,6 +26,7 @@ Barcode Scanner to scan all type of barcode and QR code.
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

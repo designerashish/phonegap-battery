@@ -9,6 +9,7 @@ Barcode Scanner to scan all type of barcode and QR code.
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -17,16 +18,12 @@ Barcode Scanner to scan all type of barcode and QR code.
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-
-<icon src="icon.png" />
-
-<splash src="splash.png" />
-
-<splash src="res/screens/android/screen-hdpi-portrait.png" density="port-hdpi" />
-<splash src="res/screens/android/screen-ldpi-portrait.png" density="port-ldpi" />
-<splash src="res/screens/android/screen-mdpi-portrait.png" density="port-mdpi" />
-<splash src="res/screens/android/screen-xhdpi-portrait.png" density="port-xhdpi" />
-
+        <icon src="icon.png" />
+        <splash src="splash.png" />
+        <splash density="port-hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
+        <splash density="port-ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
+        <splash density="port-mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
+        <splash density="port-xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -46,15 +43,12 @@ Barcode Scanner to scan all type of barcode and QR code.
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="11" />
     <preference name="android-installLocation" value="auto" />
-    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize"/>
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
     <preference name="permissions" value="none" />
     <engine name="android" spec="^6.2.3" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
-    <plugin name="cordova-plugin-flashlight" spec="^3.2.0" />
     <plugin name="cordova-plugin-battery-status" spec="^1.2.4" />
-    <plugin name="phonegap-plugin-barcodescanner" spec="^6.0.8" />
+    <plugin name="cordova-plugin-flashlight" spec="^3.2.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-
-
-
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin name="phonegap-plugin-barcodescanner" spec="^6.0.8" />
 </widget>
