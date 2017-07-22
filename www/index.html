@@ -51,16 +51,16 @@
             <form name="login" id="login">
             <span>
                 <label for="base_uri">Base URI</label>
-                <input type="text" required name="name" id="base_uri">
+                <input type="text"   name="name" id="base_uri">
             </span>
             <span>
                 <label name="email">Email</label>
-                <input type="email" required name="email" id="email">
+                <input type="email"   name="email" id="email">
             </span>
 
             <span>
                 <label name="password">Password</label>
-                <input type="password" required name="password" id="password">
+                <input type="password"   name="password" id="password">
             </span>
                 
                 <input type="submit" name="login_submit">
@@ -82,9 +82,9 @@
 
 <!--Create Asset Screen-->
     <div id="create_asset" style="display:none;">
-        <div class="top_nav"><span class="backicon"></span><h2>Create Asset</h2></div>
+        <div class="top_nav"><span id="back"  class="backicon"></span><h2>Create Asset</h2></div>
         
-        <form name="create_asset_form">
+        <form name="create_asset_form" id="create_asset_form">
             <span>
                 <label for="asset_tag">Asset Tag</label>
                 <input type="text" required name="asset_tag" id="asset_tag">

@@ -36,11 +36,12 @@ var el = document.querySelector('.js-fade');
 
 
 
+
 document.getElementById('login').addEventListener('submit', userHome);
 document.getElementById('create_asset_but').addEventListener('click', create_asset);
 
 function userHome(e){
-    e.preventDefault();
+   e.preventDefault();
     document.getElementById('login_container').style.display = 'none';
     document.getElementById('home_container').style.display = 'block'; 
      console.log(123);
@@ -49,7 +50,14 @@ function userHome(e){
 function create_asset(){
     document.getElementById('home_container').style.display = 'none';
     document.getElementById('create_asset').style.display = 'block'; 
-}
+};
+
+ var form = document.getElementById("create_asset_form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                sendData();
+            });
+
 
 
 document.getElementById('asset_tag').addEventListener('focus',mscan);
@@ -82,13 +90,34 @@ function mscan(){
     );
 };
 
-
+document.getElementById('back').addEventListener('click',onBackKeyDown, false)
  document.addEventListener("backbutton", onBackKeyDown, false);  
     function onBackKeyDown(e) { 
-  //    e.preventDefault(); 
+     document.getElementById('create_asset').style.display = 'none';
+    document.getElementById('home_container').style.display = 'block'; 
+    document.getElementById('create_asset_form').reset();
+
+    history.go(-1);
+    //navigator.app.backHistory();
+
      }
 
 }
-};
 
+
+};
+function sendData() {
+    var form = document.getElementById("create_asset_form");
+    var XHR = new XMLHttpRequest();
+    var FD = new FormData(form);
+    XHR.addEventListener("load", function(event) {
+      form.reset();
+      alert("User Data has been Saved.");
+     });
+    XHR.addEventListener("error", function(event) {
+      alert('Oops! Something goes wrong.');
+    });
+    XHR.open("POST", "http://designerashish.org/assets/post.php");
+    XHR.send(FD);
+  }
 app.initialize();
