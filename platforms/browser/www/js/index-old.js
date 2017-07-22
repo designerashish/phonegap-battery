@@ -90,3 +90,5 @@ Top Blue Header Color : #097bbe with shadow.
         function torchtoggle() { 
             window.plugins.flashlight.toggle();
         }
+
+http://cordova.apache.org/ns/1.0 

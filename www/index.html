@@ -39,16 +39,71 @@
         <div class="app">
            
         <div id="deviceready" >
-            <button id="barcode">Scan Barcode</button>
-            <h2 id="h2"></h2>
-     <!--login-->
-            <form name="login">
-                
 
+
+ 
+     <!--login-->
+        <div id="login_container" class="js-fade fade-in is-paused" style="display:block">
+           
+           <img src="img/login_logo.png" class="logo">
+
+
+            <form name="login" id="login">
+            <span>
+                <label for="base_uri">Base URI</label>
+                <input type="text" required name="name" id="base_uri">
+            </span>
+            <span>
+                <label name="email">Email</label>
+                <input type="email" required name="email" id="email">
+            </span>
+
+            <span>
+                <label name="password">Password</label>
+                <input type="password" required name="password" id="password">
+            </span>
+                
+                <input type="submit" name="login_submit">
 
             </form>
+        </div>    
      <!--/login-->
 
+
+<!--Home Screen-->
+<div id="home_container" class="" style="display:none;">
+ <img src="img/login_logo.png" class="logo">
+
+<a href="#" class="button" id="create_asset_but">Create Asset</a>
+<a href="#" class="button" id="track_asset_but">Track Asset</a>
+
+</div>
+<!--/Home Screen-->
+
+<!--Create Asset Screen-->
+    <div id="create_asset" style="display:none;">
+        <div class="top_nav"><span class="backicon"></span><h2>Create Asset</h2></div>
+        
+        <form name="create_asset_form">
+            <span>
+                <label for="asset_tag">Asset Tag</label>
+                <input type="text" required name="asset_tag" id="asset_tag">
+            </span>
+            <span>
+                <label for="asset_name">Asset Name</label>
+                <input type="text" required name="asset_name" id="asset_name">
+            </span>
+
+            
+                
+            <input type="submit" value="Create Asset" name="create_submit">
+
+            </form>
+
+
+
+    </div>
+<!--Create Asset Screen-->
 
         </div>
         </div>
