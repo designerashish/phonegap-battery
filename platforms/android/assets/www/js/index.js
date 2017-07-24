@@ -39,6 +39,7 @@ var el = document.querySelector('.js-fade');
 
 document.getElementById('login').addEventListener('submit', userHome);
 document.getElementById('create_asset_but').addEventListener('click', create_asset);
+document.getElementById('track_asset_but').addEventListener('click', track_asset);
 
 function userHome(e){
    e.preventDefault();
@@ -52,12 +53,28 @@ function create_asset(){
     document.getElementById('create_asset').style.display = 'block'; 
 };
 
+
+
+function track_asset(){
+    document.getElementById('home_container').style.display = 'none';
+    document.getElementById('track_asset').style.display = 'block'; 
+};
+
+
+
  var form = document.getElementById("create_asset_form");
             form.addEventListener("submit", function (event) {
                 event.preventDefault();
                 sendData();
+                getData();
             });
 
+
+ var form1 = document.getElementById("track_asset_form");
+            form1.addEventListener("submit", function (event) {
+                event.preventDefault();
+                getData();
+            });
 
 
 document.getElementById('asset_tag').addEventListener('focus',mscan);
@@ -90,16 +107,26 @@ function mscan(){
     );
 };
 
-document.getElementById('back').addEventListener('click',onBackKeyDown, false)
+document.getElementById('back').addEventListener('click',onBackKeyDown, false);
  document.addEventListener("backbutton", onBackKeyDown, false);  
     function onBackKeyDown(e) { 
      document.getElementById('create_asset').style.display = 'none';
     document.getElementById('home_container').style.display = 'block'; 
     document.getElementById('create_asset_form').reset();
-
     history.go(-1);
     //navigator.app.backHistory();
+     }
 
+
+
+document.getElementById('trackback').addEventListener('click',onBackKeyDown1, false);
+ document.addEventListener("backbutton", onBackKeyDown1, false);  
+    function onBackKeyDown1(e) { 
+     document.getElementById('track_asset').style.display = 'none';
+    document.getElementById('home_container').style.display = 'block'; 
+    document.getElementById('track_asset_form').reset();
+    history.go(-1);
+    //navigator.app.backHistory();
      }
 
 }
@@ -113,7 +140,7 @@ function sendData() {
     var FD = new FormData(form);
     XHR.addEventListener("load", function(event) {
       form.reset();
-      alert("User Data has been Saved.");
+     alert(event.target.responseText);
      });
     XHR.addEventListener("error", function(event) {
       alert('Oops! Something goes wrong.');
@@ -121,4 +148,42 @@ function sendData() {
     XHR.open("POST", "http://www.designerashish.org/assets/post.php");
     XHR.send(FD);
   }
+
+function getData() {
+    var form1 = document.getElementById("track_asset_form");
+    var XHR1 = new XMLHttpRequest();
+    var FD1 = new FormData(form1);
+    XHR1.addEventListener("load", function(event) {
+      form1.reset();
+
+      fetcheddata = event.target.responseText;
+      //document.getElementById('tracked_data').innerHTML = fetcheddata;
+     //alert(event.target.responseText);
+var html = '<ul>';
+fetcheddata = JSON.parse(fetcheddata);
+
+
+
+for(i=0; i<fetcheddata.length;i++){
+if(fetcheddata['0'].code==400){
+    html = '<li>'+fetcheddata['0'].message+'</li>';
+}
+else{
+    html += '<li>'+fetcheddata[i].tag+'</li><li>'+fetcheddata[i].name+'</li><li>'+fetcheddata[i].date+'</li>';
+} 
+
+// console.log(fetcheddata[i].tag +"||"+ fetcheddata[i].name +"||"+ fetcheddata[i].date);
+}
+html += '</ul>';
+document.getElementById('tracked_data').innerHTML = html;
+     });
+    XHR1.addEventListener("error", function(event) {
+      alert('Oops! Something goes wrong.');
+
+    });
+    XHR1.open("POST", "http://www.designerashish.org/assets/get.php");
+    XHR1.send(FD1);
+  }
+
+
 app.initialize();

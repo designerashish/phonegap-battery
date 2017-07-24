@@ -90,7 +90,7 @@ body {
 
 /*login*/
 
-#login_container, #home_container, #create_asset{
+#login_container, #home_container, #create_asset, #track_asset{
     
     background: #fff;
     height:100VH;
@@ -104,17 +104,17 @@ body {
     padding-top:15VH;
 }
 
-#login_container form, #create_asset form{
+ form{
     width:90%;
     margin:0 auto;
 }
 
-#login_container span, #create_asset span{
+form span{
     display:block;
     margin-bottom:20px;
     position: relative;
 }
-#login_container label, #create_asset label{
+ label{
     display:block;
     text-align: left;
         font-size:.7rem;
@@ -128,7 +128,7 @@ body {
 
 
 
-#login_container input[type="text"],#login_container input[type="email"], #login_container input[type="password"], #create_asset input[type="text"]{
+ input[type="text"], input[type="email"],  input[type="password"] {
     border:none;
     border-bottom:solid 1px #d4d4d4;
     box-shadow: none;
@@ -141,7 +141,7 @@ body {
 
 }
 
-#login_container input[type="submit"], .button, #create_asset input[type="submit"]{
+ input[type="submit"], .button {
 font-size: 1.2rem;
     outline: none;
     color: #fff;
