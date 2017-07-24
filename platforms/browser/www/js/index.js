@@ -77,12 +77,13 @@ function track_asset(){
             });
 
 
-document.getElementById('asset_tag').addEventListener('focus',mscan);
-function mscan(){
+document.getElementById('asset_tag').addEventListener('focus',function(){mscan('asset_tag')});
+document.getElementById('track_asset_tag').addEventListener('focus',function(){mscan('track_asset_tag')});
+function mscan(id){
     cordova.plugins.barcodeScanner.scan(
         function (result) {
-                document.getElementById('asset_tag').value = result.text;
-                document.getElementById('asset_tag').blur();
+                document.getElementById(id).value = result.text;
+                document.getElementById(id).blur();
                 /*alert("We got a barcode\n" +
                 "Result: " + result.text + "\n" +
                 "Format: " + result.format + "\n" +
