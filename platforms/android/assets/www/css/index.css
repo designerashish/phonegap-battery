@@ -241,3 +241,35 @@ background-size:15vw;
     top: 2vh;
     z-index: 10;
 }
+
+#tracked_data{
+    margin-top:25px;
+}
+
+#tracked_data ul{
+    border-bottom:solid 1px #d4d4d4;
+    margin:10px auto;
+    padding:0px;
+    padding-bottom:10px;
+    overflow: hidden;
+    width:90VW;
+}
+
+#tracked_data ul li {
+    text-align: left;
+    width:33%;
+    overflow-x:scroll;
+    float:left;
+    display:block;
+    
+}
+
+#tracked_data ul li:nth-child(3n+1) {
+    clear:both;
+}
+
+#tracked_data ul li.notfound{
+    text-align: center;
+    width:100%;
+    font-weight:bold;
+}

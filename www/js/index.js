@@ -159,22 +159,22 @@ function getData() {
       fetcheddata = event.target.responseText;
       //document.getElementById('tracked_data').innerHTML = fetcheddata;
      //alert(event.target.responseText);
-var html = '<ul>';
+var html = '<ul><li><strong>Asset Tag</strong></li><li><strong>Asset Name</strong></li><li><strong>Create Date</strong></li></ul>';
 fetcheddata = JSON.parse(fetcheddata);
 
 
 
 for(i=0; i<fetcheddata.length;i++){
 if(fetcheddata['0'].code==400){
-    html = '<li>'+fetcheddata['0'].message+'</li>';
+    html = '<ul ><li class="notfound">'+fetcheddata['0'].message+'</li></ul>';
 }
 else{
-    html += '<li>'+fetcheddata[i].tag+'</li><li>'+fetcheddata[i].name+'</li><li>'+fetcheddata[i].date+'</li>';
+    html += '<ul ><li>'+fetcheddata[i].tag+'</li><li>'+fetcheddata[i].name+'</li><li>'+fetcheddata[i].date+'</li></ul>';
 } 
 
 // console.log(fetcheddata[i].tag +"||"+ fetcheddata[i].name +"||"+ fetcheddata[i].date);
 }
-html += '</ul>';
+//html += '</ul>';
 document.getElementById('tracked_data').innerHTML = html;
      });
     XHR1.addEventListener("error", function(event) {
